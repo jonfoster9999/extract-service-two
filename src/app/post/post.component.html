@@ -1,0 +1,9 @@
+<label for="">Add Post</label><br>
+<input type="text" (keyup.enter)=createPost(post) #post><br>
+<button (click)="loadPosts()">Load Posts</button>
+<br>
+<ul>
+  <li *ngFor="let post of posts"> 
+    <button (click)="deletePost(post)">Delete</button> {{post.title}}
+  </li>
+</ul>
